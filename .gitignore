@@ -1,0 +1,25 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Django migration files (if you choose not to track them)
+*.log
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor configuration files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Ignore testing/coverage directories
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
