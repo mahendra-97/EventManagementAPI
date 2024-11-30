@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 
 
@@ -5,7 +6,7 @@ class EventModel(models.Model):
 
     STATUS_CHOICE = (('scheduled','scheduled'),('ongoing','ongoing'),('completed','completed'),('canceled','canceled'))
 
-    event_id = models.AutoField('event_id',primary_key=True)
+    event_id = models.UUIDField('event_id',primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField('name',max_length=50, null=False)
     description = models.CharField('description',max_length=255)
     start_time = models.DateTimeField('start_time',null=False)
