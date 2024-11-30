@@ -81,13 +81,10 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         'NAME': config('DB_NAME'),
-        # 'NAME': 'EventManagementDB',
         'USER':'root',
-        # 'PASSWORD':'dbda',
         'PASSWORD':config('DB_PASSWORD'),
         'PORT':'3306',
         'HOST':'localhost',
-
     }
 }
 
