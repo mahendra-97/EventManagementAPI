@@ -6,6 +6,7 @@ __pycache__/
 # Ignore virtual environments
 venv/
 env/
+evenenv/
 
 # Ignore Django migration files (if you choose not to track them)
 *.log
