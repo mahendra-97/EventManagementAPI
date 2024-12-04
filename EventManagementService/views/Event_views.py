@@ -88,4 +88,4 @@ class EventView(APIView):
             
         except Exception as e:
             raise handle_exception(e)
-        
+            

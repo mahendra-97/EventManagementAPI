@@ -5,5 +5,6 @@ from EventManagementService.views import EventView, AttendeeView
 urlpatterns=[
     path('event',EventView.as_view(),name='event'),
     path('event/<str:id>', EventView.as_view(), name='event-detail'),
-    path('attendee',AttendeeView.as_view(),name='attendee')
+    path('attendee',AttendeeView.as_view(),name='attendee'),
+    path('attendee/<str:id>',AttendeeView.as_view(),name='attendee-detail'),
 ]

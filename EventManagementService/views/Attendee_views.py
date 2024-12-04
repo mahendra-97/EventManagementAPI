@@ -1,9 +1,14 @@
+# Standard library Import
 import json
 import logging
 import traceback
+
+# Third party library Import
 from django.http import JsonResponse
 from rest_framework import status
 from rest_framework.views import APIView
+
+# Local library Import
 from EventManagementService.models import AttendeeModel
 from EventManagementService.common import handle_exception
 from EventManagementService.serializers import AttendeeSerializer
@@ -37,8 +42,15 @@ class AttendeeView(APIView):
         except Exception as e:
             raise handle_exception(e)
 
-    def put(self, request):
-        pass
+    def put(self, request, id=None):
+        print("In PUT")
+        try:
+            request_data = request.data
+            print(request_data)
+
+        except Exception as e:
+            raise handle_exception(e)
+
 
     def delete(self, request):
         pass
