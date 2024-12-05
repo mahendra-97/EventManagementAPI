@@ -47,8 +47,10 @@ class AttendeeView(APIView):
         try:
             request_data = request.data
             print(request_data)
-
+            data = request_data
+            return JsonResponse({"status":"success", "message":"Attendee data Updated successfully.", "data":data}, status=status.HTTP_200_OK)
         except Exception as e:
+            print(traceback.format_exc())
             raise handle_exception(e)
 
 
